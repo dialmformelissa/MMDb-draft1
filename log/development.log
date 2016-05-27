@@ -160,3 +160,1815 @@ Processing by MoviesController#show as HTML
   [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered movies/show.html.erb within layouts/application (0.9ms)
 Completed 200 OK in 21ms (Views: 11.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 13:29:04 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 13:45:28 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 13:45:28 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 13:45:28 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 13:45:28 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 13:45:28 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 13:45:28 -0400
+
+
+Started GET "/movies/new" for ::1 at 2016-05-27 13:45:32 -0400
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (13.5ms)
+  Rendered movies/new.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-05-27 13:45:48 -0400
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (1.2ms)
+  Rendered movies/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 13:45:49 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 13:45:49 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 13:45:49 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 13:45:49 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 13:45:49 -0400
+
+
+Started GET "/movies/new" for ::1 at 2016-05-27 13:46:31 -0400
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (1.1ms)
+  Rendered movies/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 13:46:31 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 13:46:31 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 13:46:31 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 13:46:31 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 13:46:31 -0400
+
+
+Started GET "/movies/new" for ::1 at 2016-05-27 13:46:53 -0400
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (1.1ms)
+  Rendered movies/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 13:46:53 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 13:46:53 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 13:46:53 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 13:46:53 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 13:46:53 -0400
+
+
+Started GET "/movies" for ::1 at 2016-05-27 13:48:11 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 13:52:29 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 13:52:30 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 13:52:30 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 13:52:30 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 13:52:30 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 13:52:30 -0400
+
+
+Started GET "/movies/new" for ::1 at 2016-05-27 13:52:33 -0400
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (1.1ms)
+  Rendered movies/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/movies" for ::1 at 2016-05-27 13:52:44 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ap3Rtv7aPPlSh3uRpAl/zA1erjOAblmDQXRrddkDDHlfAzqdN6nCU6Zpc+IMs3GQ/Crooq+id9d2ZrekQd+/Bw==", "movie"=>{"title"=>"Alien 3"}, "commit"=>"Create Movie"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `movie_params' for #<MoviesController:0x007f8f9927dcf8>
+Did you mean?  movie_path):
+  app/controllers/movies_controller.rb:15:in `create'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (97.2ms)
+
+
+Started POST "/movies" for ::1 at 2016-05-27 13:55:48 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ap3Rtv7aPPlSh3uRpAl/zA1erjOAblmDQXRrddkDDHlfAzqdN6nCU6Zpc+IMs3GQ/Crooq+id9d2ZrekQd+/Bw==", "movie"=>{"title"=>"Alien 3"}, "commit"=>"Create Movie"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Alien 3"], ["created_at", "2016-05-27 17:55:48.543364"], ["updated_at", "2016-05-27 17:55:48.543364"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/new
+Completed 302 Found in 12ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-05-27 13:55:48 -0400
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (1.4ms)
+  Rendered movies/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 13:55:48 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 13:55:48 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 13:55:48 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 13:55:48 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 13:55:48 -0400
+
+
+Started GET "/movies" for ::1 at 2016-05-27 13:55:51 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/3" for ::1 at 2016-05-27 13:55:53 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered movies/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 13:58:14 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 13:58:14 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 13:58:14 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 13:58:14 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 13:58:14 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 13:58:14 -0400
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 13:58:15 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.4ms)
+  Rendered movies/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 13:58:16 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 14:00:01 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (29.6ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined local variable or method `new_movies_path' for #<#<Class:0x007f8f97341678>:0x007f8f990a85b8>
+Did you mean?  new_movie_path):
+    1: <h1>MMDb</h1>
+    2: 
+    3: <%= link_to "Add movie", new_movies_path %>
+    4: 
+    5: <% @movies.each do |movie| %>
+    6:   <p>
+  app/views/movies/index.html.erb:3:in `_app_views_movies_index_html_erb__3970700512072546243_70127362464000'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (80.3ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 14:00:09 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 14:00:09 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 14:00:09 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 14:00:09 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 14:00:09 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 14:00:09 -0400
+
+
+Started GET "/movies/new" for ::1 at 2016-05-27 14:00:11 -0400
+Processing by MoviesController#new as HTML
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_form.html.erb (1.2ms)
+  Rendered movies/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 14:00:13 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 14:06:06 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 14:06:06 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 14:06:06 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 14:06:06 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 14:06:06 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 14:06:06 -0400
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:06:08 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/1/edit" for ::1 at 2016-05-27 14:06:15 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+ActionView::MissingTemplate (Missing template movies/edit, application/edit with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/melissahanson/ROR101/github/final-project/MMDb/app/views"
+):
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/melissahanson/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/melissahanson/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/melissahanson/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/melissahanson/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (46.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.8ms)
+
+
+Started GET "/movies/1/edit" for ::1 at 2016-05-27 14:19:09 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.4ms)
+  Rendered movies/_form.html.erb (1.4ms)
+  Rendered movies/edit.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 27ms (Views: 20.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 14:19:09 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 14:19:09 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 14:19:09 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 14:19:09 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 14:19:09 -0400
+
+
+Started PATCH "/movies/1" for ::1 at 2016-05-27 14:19:12 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6QqT8YDE43QJedpVsyTaTTTU50SsU66GDn6/qTwSffO0lHjaSbcd3v2X0iYbntQRxaCh1YOfgNI5bGN4pM7OjQ==", "movie"=>{"title"=>"Alien"}, "commit"=>"Update Movie", "id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:19:12 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (1.2ms)
+  Rendered movies/show.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/melissahanson/ROR101/github/final-project/MMDb/app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+... link_to 'edit' edit_movie_path(movie) );@output_buffer.to_s
+...                               ^):
+  app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/show.html.erb:8:in `_app_views_movies_show_html_erb___109306386057568362_70127365142600'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.9ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (85.8ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:20:00 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (0.6ms)
+  Rendered movies/show.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/Users/melissahanson/ROR101/github/final-project/MMDb/app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+... link_to 'edit' edit_movie_path(movie) );@output_buffer.to_s
+...                               ^):
+  app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/show.html.erb:8:in `_app_views_movies_show_html_erb___109306386057568362_70127365142600'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (97.7ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:20:16 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (0.6ms)
+  Rendered movies/show.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms)
+
+SyntaxError (/Users/melissahanson/ROR101/github/final-project/MMDb/app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+... link_to 'edit' edit_movie_path(movie) );@output_buffer.to_s
+...                               ^):
+  app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/show.html.erb:8:in `_app_views_movies_show_html_erb___109306386057568362_70127365142600'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.6ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:20:43 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (0.6ms)
+  Rendered movies/show.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms)
+
+SyntaxError (/Users/melissahanson/ROR101/github/final-project/MMDb/app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+... link_to 'edit' edit_movie_path(movie) );@output_buffer.to_s
+...                               ^):
+  app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/show.html.erb:8:in `_app_views_movies_show_html_erb___109306386057568362_70127365142600'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.0ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:20:49 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (0.7ms)
+  Rendered movies/show.html.erb within layouts/application (9.7ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.6ms)
+
+SyntaxError (/Users/melissahanson/ROR101/github/final-project/MMDb/app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+... link_to 'edit' edit_movie_path(movie) );@output_buffer.to_s
+...                               ^):
+  app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/show.html.erb:8:in `_app_views_movies_show_html_erb___109306386057568362_70127365142600'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (78.9ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:21:30 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (0.9ms)
+  Rendered movies/show.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/melissahanson/ROR101/github/final-project/MMDb/app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+... link_to 'edit' edit_movie_path(@movie) );@output_buffer.to_s
+...                               ^):
+  app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/show.html.erb:8:in `_app_views_movies_show_html_erb___109306386057568362_70127336412740'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.9ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (92.4ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:22:42 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (0.9ms)
+  Rendered movies/show.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/melissahanson/ROR101/github/final-project/MMDb/app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+...link_to 'edit' edit_movies_path(movie) );@output_buffer.to_s
+...                               ^):
+  app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/show.html.erb:8:in `_app_views_movies_show_html_erb___109306386057568362_70127336412740'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.0ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.4ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:23:30 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (1.0ms)
+  Rendered movies/show.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/melissahanson/ROR101/github/final-project/MMDb/app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+... link_to 'edit' edit_movie_path(movie) );@output_buffer.to_s
+...                               ^):
+  app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/show.html.erb:8:in `_app_views_movies_show_html_erb___109306386057568362_70127336412740'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (85.7ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:25:14 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (0.8ms)
+  Rendered movies/show.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/melissahanson/ROR101/github/final-project/MMDb/app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+... link_to 'edit' edit_movie_path );@output_buffer.to_s
+...                               ^):
+  app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/show.html.erb:8:in `_app_views_movies_show_html_erb___109306386057568362_70127325763580'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.4ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:25:25 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (0.8ms)
+  Rendered movies/show.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/melissahanson/ROR101/github/final-project/MMDb/app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+... link_to 'edit' edit_movie_path(@movie) );@output_buffer.to_s
+...                               ^):
+  app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/show.html.erb:8:in `_app_views_movies_show_html_erb___109306386057568362_70127325763580'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.0ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (93.5ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:25:34 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (0.9ms)
+  Rendered movies/show.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/melissahanson/ROR101/github/final-project/MMDb/app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+... link_to 'edit' edit_movie_path(movie) );@output_buffer.to_s
+...                               ^):
+  app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/show.html.erb:8:in `_app_views_movies_show_html_erb___109306386057568362_70127325763580'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.7ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:32:23 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.3ms)
+  Rendered movies/_editlink.html.erb (0.9ms)
+  Rendered movies/show.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/melissahanson/ROR101/github/final-project/MMDb/app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+... link_to 'edit' edit_movie_path(movie) );@output_buffer.to_s
+...                               ^):
+  app/views/movies/_editlink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/show.html.erb:8:in `_app_views_movies_show_html_erb___109306386057568362_70127325126540'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (89.7ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:32:38 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 14:32:38 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 14:32:38 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 14:32:38 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 14:32:38 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 14:32:38 -0400
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:32:59 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (1.6ms)
+  Rendered movies/show.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/melissahanson/ROR101/github/final-project/MMDb/app/views/movies/_deletelink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+...k_to 'delete' delete_movie_path(movie) );@output_buffer.to_s
+...                               ^):
+  app/views/movies/_deletelink.html.erb:1: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/movies/show.html.erb:9:in `_app_views_movies_show_html_erb___109306386057568362_70127335670300'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.7ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:33:21 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/melissahanson/ROR101/github/final-project/MMDb/app/views/movies/show.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+... link_to 'edit' edit_movie_path(movie) );@output_buffer.to_s
+...                               ^):
+  app/views/movies/show.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (83.5ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:33:38 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 14:33:38 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 14:33:38 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 14:33:38 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 14:33:38 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 14:33:38 -0400
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:34:34 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 14:34:34 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 14:34:34 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 14:34:34 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 14:34:34 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 14:34:34 -0400
+
+
+Started GET "/movies/1/edit" for ::1 at 2016-05-27 14:34:41 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  Rendered movies/_form.html.erb (8.2ms)
+  Rendered movies/edit.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/1/edit" for ::1 at 2016-05-27 14:35:43 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_form.html.erb (1.3ms)
+  Rendered movies/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 22ms (Views: 15.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 14:35:43 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 14:35:43 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 14:35:43 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 14:35:43 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 14:35:43 -0400
+
+
+Started PATCH "/movies/1" for ::1 at 2016-05-27 14:35:44 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFzGDy++xk3dNqmgpBKY15x7bHeAQojYz73qP1Www0Lpwi0k5s045ynYodMMqJaLbQ8q5q+Opoz4rzbuzWxwPA==", "movie"=>{"title"=>"Alien"}, "commit"=>"Update Movie", "id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:35:44 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 14:35:46 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-05-27 14:35:48 -0400
+Processing by MoviesController#new as HTML
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_form.html.erb (1.0ms)
+  Rendered movies/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 14:35:49 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 14:36:04 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 14:36:04 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 14:36:04 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 14:36:04 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 14:36:04 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 14:36:04 -0400
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:36:06 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/melissahanson/ROR101/github/final-project/MMDb/app/views/movies/show.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+... link_to 'edit' edit_movie_path(movie) );@output_buffer.to_s
+...                               ^):
+  app/views/movies/show.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (79.3ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:36:06 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/melissahanson/ROR101/github/final-project/MMDb/app/views/movies/show.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+... link_to 'edit' edit_movie_path(movie) );@output_buffer.to_s
+...                               ^):
+  app/views/movies/show.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.9ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (83.1ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:37:14 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/melissahanson/ROR101/github/final-project/MMDb/app/views/movies/show.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+... link_to 'edit' edit_movie_path(@movie) );@output_buffer.to_s
+...                               ^):
+  app/views/movies/show.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.5ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:39:51 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/melissahanson/ROR101/github/final-project/MMDb/app/views/movies/show.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+... link_to "edit" edit_movie_path(@movie) );@output_buffer.to_s
+...                               ^):
+  app/views/movies/show.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.6ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:40:01 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 14:40:01 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 14:40:01 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 14:40:01 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 14:40:01 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 14:40:01 -0400
+
+
+Started GET "/movies/1/edit" for ::1 at 2016-05-27 14:40:04 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_form.html.erb (1.1ms)
+  Rendered movies/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 14:40:05 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 14:42:11 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 14:42:11 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 14:42:11 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 14:42:11 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 14:42:11 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 14:42:11 -0400
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 14:42:11 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (30.2ms)
+  Rendered movies/show.html.erb within layouts/application (34.1ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined local variable or method `movie' for #<#<Class:0x007f8f993bdb40>:0x007f8f94c8cdc0>
+Did you mean?  @movie):
+    1: <%= link_to 'edit', edit_movie_path(movie) %>
+  app/views/movies/_editlink.html.erb:1:in `_app_views_movies__editlink_html_erb___1208837293079702008_70127326637000'
+  app/views/movies/show.html.erb:8:in `_app_views_movies_show_html_erb___109306386057568362_70127377497280'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (82.4ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 14:42:12 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  Rendered movies/_editlink.html.erb (29.7ms)
+  Rendered movies/show.html.erb within layouts/application (32.3ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined local variable or method `movie' for #<#<Class:0x007f8f993bdb40>:0x007f8f9970d070>
+Did you mean?  @movie):
+    1: <%= link_to 'edit', edit_movie_path(movie) %>
+  app/views/movies/_editlink.html.erb:1:in `_app_views_movies__editlink_html_erb___1208837293079702008_70127321377140'
+  app/views/movies/show.html.erb:8:in `_app_views_movies_show_html_erb___109306386057568362_70127321365840'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (81.0ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 14:42:42 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (0.5ms)
+  Rendered movies/_deletelink.html.erb (22.6ms)
+  Rendered movies/show.html.erb within layouts/application (26.9ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `delete_movie_path' for #<#<Class:0x007f8f993bdb40>:0x007f8f9c803aa8>):
+    1: <%= link_to 'delete', delete_movie_path(@movie) %>
+  app/views/movies/_deletelink.html.erb:1:in `_app_views_movies__deletelink_html_erb__4545348198245792545_70127391359380'
+  app/views/movies/show.html.erb:9:in `_app_views_movies_show_html_erb___109306386057568362_70127321365840'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (86.5ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 14:42:58 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (26.3ms)
+  Rendered movies/show.html.erb within layouts/application (29.6ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `destroy_movie_path' for #<#<Class:0x007f8f993bdb40>:0x007f8f975f2fe8>
+Did you mean?  edit_movie_path):
+    1: <%= link_to 'delete', destroy_movie_path(@movie) %>
+  app/views/movies/_deletelink.html.erb:1:in `_app_views_movies__deletelink_html_erb__4545348198245792545_70127320893880'
+  app/views/movies/show.html.erb:9:in `_app_views_movies_show_html_erb___109306386057568362_70127321365840'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (81.8ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 14:43:38 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.6ms)
+  Rendered movies/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 14:43:39 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 14:43:39 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 14:43:39 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 14:43:39 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 14:43:39 -0400
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 14:43:43 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (0.5ms)
+  Rendered movies/_deletelink.html.erb (0.5ms)
+  Rendered movies/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 14:43:51 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (30.6ms)
+  Rendered movies/show.html.erb within layouts/application (33.9ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined local variable or method `movie' for #<#<Class:0x007f8f993bdb40>:0x007f8f9ab45b00>
+Did you mean?  @movie):
+    1: <%= link_to 'delete', movie_path(movie) %>
+  app/views/movies/_deletelink.html.erb:1:in `_app_views_movies__deletelink_html_erb__4545348198245792545_70127349317360'
+  app/views/movies/show.html.erb:9:in `_app_views_movies_show_html_erb___109306386057568362_70127321365840'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (81.1ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 14:44:01 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.4ms)
+  Rendered movies/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 14:44:01 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 14:44:01 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 14:44:01 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 14:44:01 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 14:44:01 -0400
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 14:44:07 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.4ms)
+  Rendered movies/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 14:44:08 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 14:44:08 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 14:44:08 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 14:44:34 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.6ms)
+  Rendered movies/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 14:44:34 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 14:44:34 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 14:44:34 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 14:44:34 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 14:44:34 -0400
+
+
+Started GET "/movies" for ::1 at 2016-05-27 14:45:31 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 14:45:33 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.7ms)
+  Rendered movies/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 14:45:34 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFormats (20160527185301)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "formats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "format" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160527185301"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to AddFormatToMovies (20160527185422)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160527185422"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TEMPORARY TABLE "amovies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "gowatchitID" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "title_type" varchar, "director" varchar, "release_date" date) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "movies"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "amovies" ("id","title","gowatchitID","created_at","updated_at","title_type","director","release_date") VALUES (1, 'Alien', NULL, '2016-05-27 16:32:34.704211', '2016-05-27 16:32:34.704211', 'Sci-Fi', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "amovies" ("id","title","gowatchitID","created_at","updated_at","title_type","director","release_date") VALUES (2, 'Aliens', NULL, '2016-05-27 16:34:04.216460', '2016-05-27 16:34:04.216460', 'Sci-Fi', 'James Cameron', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "amovies" ("id","title","gowatchitID","created_at","updated_at","title_type","director","release_date") VALUES (3, 'Alien 3', NULL, '2016-05-27 17:55:48.543364', '2016-05-27 17:55:48.543364', NULL, NULL, NULL)[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "movies"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "gowatchitID" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "title_type" varchar, "director" varchar, "release_date" date) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "amovies"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "movies" ("id","title","gowatchitID","created_at","updated_at","title_type","director","release_date") VALUES (1, 'Alien', NULL, '2016-05-27 16:32:34.704211', '2016-05-27 16:32:34.704211', 'Sci-Fi', NULL, NULL)[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "movies" ("id","title","gowatchitID","created_at","updated_at","title_type","director","release_date") VALUES (2, 'Aliens', NULL, '2016-05-27 16:34:04.216460', '2016-05-27 16:34:04.216460', 'Sci-Fi', 'James Cameron', NULL)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "movies" ("id","title","gowatchitID","created_at","updated_at","title_type","director","release_date") VALUES (3, 'Alien 3', NULL, '2016-05-27 17:55:48.543364', '2016-05-27 17:55:48.543364', NULL, NULL, NULL)[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "amovies"
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20160527185422"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "movies" ADD "format_id" integer
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160527185422"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mFormat Load (1.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "formats" ("format", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["format", "DVD"], ["created_at", "2016-05-27 19:01:19.683082"], ["updated_at", "2016-05-27 19:01:19.683082"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "formats" ("format", "created_at", "updated_at") VALUES (?, ?, ?)  [["format", "Bluray"], ["created_at", "2016-05-27 19:01:31.179834"], ["updated_at", "2016-05-27 19:01:31.179834"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "formats" ("format", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["format", "Digital"], ["created_at", "2016-05-27 19:01:37.146297"], ["updated_at", "2016-05-27 19:01:37.146297"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+
+
+Started GET "/movies" for ::1 at 2016-05-27 16:18:26 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 250ms (Views: 236.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 16:18:26 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 16:18:26 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 16:18:26 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 16:18:26 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 16:18:26 -0400
+
+
+Started GET "/movies/new" for ::1 at 2016-05-27 16:18:27 -0400
+Processing by MoviesController#new as HTML
+  Rendered movies/_allmovieslink.html.erb (0.4ms)
+  Rendered movies/_form.html.erb (20.5ms)
+  Rendered movies/new.html.erb within layouts/application (26.6ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (wrong number of arguments (given 4, expected 5..7)):
+     5:   </p>
+     6:   <p>
+     7:     <%= f.label :format %><br>
+     8:     <%= collection_select(:movie, :format_id, Format.all, :format) %>
+     9:   </p>
+    10:   <%= f.submit %>
+    11: <% end %>
+  app/views/movies/_form.html.erb:8:in `block in _app_views_movies__form_html_erb__1638906659724289516_70306725244240'
+  app/views/movies/_form.html.erb:1:in `_app_views_movies__form_html_erb__1638906659724289516_70306725244240'
+  app/views/movies/new.html.erb:5:in `_app_views_movies_new_html_erb__3680183929014930800_70306730535180'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.0ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-05-27 16:18:27 -0400
+Processing by MoviesController#new as HTML
+  Rendered movies/_allmovieslink.html.erb (0.7ms)
+  Rendered movies/_form.html.erb (4.3ms)
+  Rendered movies/new.html.erb within layouts/application (9.4ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (wrong number of arguments (given 4, expected 5..7)):
+     5:   </p>
+     6:   <p>
+     7:     <%= f.label :format %><br>
+     8:     <%= collection_select(:movie, :format_id, Format.all, :format) %>
+     9:   </p>
+    10:   <%= f.submit %>
+    11: <% end %>
+  app/views/movies/_form.html.erb:8:in `block in _app_views_movies__form_html_erb__1638906659724289516_70306727943520'
+  app/views/movies/_form.html.erb:1:in `_app_views_movies__form_html_erb__1638906659724289516_70306727943520'
+  app/views/movies/new.html.erb:5:in `_app_views_movies_new_html_erb__3680183929014930800_70306695056600'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (34.9ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (79.3ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-05-27 16:32:41 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#new as HTML
+  Rendered movies/_allmovieslink.html.erb (0.4ms)
+  Rendered movies/_form.html.erb (22.1ms)
+  Rendered movies/new.html.erb within layouts/application (28.7ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (wrong number of arguments (given 4, expected 5..7)):
+     5:   </p>
+     6:   <p>
+     7:     <%= f.label :format %><br>
+     8:     <%= collection_select(:movie, :format_id, Format.all, :format) %>
+     9:   </p>
+    10:   <%= f.submit %>
+    11: <% end %>
+  app/views/movies/_form.html.erb:8:in `block in _app_views_movies__form_html_erb___3423779971866313504_70364912898180'
+  app/views/movies/_form.html.erb:1:in `_app_views_movies__form_html_erb___3423779971866313504_70364912898180'
+  app/views/movies/new.html.erb:5:in `_app_views_movies_new_html_erb__1876137182595577461_70364913061360'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.0ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (95.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMovieFormats (20160527204340)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "movie_formats" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "movie_id" integer, "format_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160527204340"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/movies/new" for ::1 at 2016-05-27 16:47:25 -0400
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by MoviesController#new as HTML
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/_form.html.erb (4.5ms)
+  Rendered movies/new.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (wrong number of arguments (given 4, expected 5..7)):
+     5:   </p>
+     6:   <p>
+     7:     <%= f.label :format %><br>
+     8:     <%= collection_select(:movie, :format_id, Format.all, :format) %>
+     9:   </p>
+    10:   <%= f.submit %>
+    11: <% end %>
+  app/views/movies/_form.html.erb:8:in `block in _app_views_movies__form_html_erb___3423779971866313504_70364912898180'
+  app/views/movies/_form.html.erb:1:in `_app_views_movies__form_html_erb___3423779971866313504_70364912898180'
+  app/views/movies/new.html.erb:5:in `_app_views_movies_new_html_erb__1876137182595577461_70364913061360'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (87.4ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-05-27 16:48:27 -0400
+Processing by MoviesController#new as HTML
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  Rendered movies/_form.html.erb (26.6ms)
+  Rendered movies/new.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 229ms (Views: 228.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 16:48:27 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 16:48:27 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 16:48:27 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 16:48:27 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 16:48:27 -0400

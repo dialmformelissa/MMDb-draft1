@@ -1,0 +1,11 @@
+<%= form_for @movie, html: { multipart: true} do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :format %><br>
+    <%= collection_check_boxes(:movie, :format_ids, Format.all, :id, :format) %>
+  </p>
+  <%= f.submit %>
+<% end %>
