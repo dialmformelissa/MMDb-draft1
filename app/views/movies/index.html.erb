@@ -1,0 +1,7 @@
+<h1>MMDb</h1>
+
+<% @movies.each do |movie| %>
+  <p>
+    <span><%= link_to movie.title, movie_path(movie) %></span>
+  </p>
+<% end %>
