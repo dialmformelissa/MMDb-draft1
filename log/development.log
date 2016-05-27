@@ -1972,3 +1972,1956 @@ Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 16:48:27 -0400
+
+
+Started GET "/movies" for ::1 at 2016-05-27 16:51:28 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 16:51:29 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (1.3ms)
+  Rendered movies/_editlink.html.erb (0.4ms)
+  Rendered movies/_deletelink.html.erb (0.4ms)
+  Rendered movies/show.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 49ms (Views: 41.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 16:53:24 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.2ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  Rendered movies/_editlink.html.erb (0.5ms)
+  Rendered movies/_deletelink.html.erb (0.4ms)
+  Rendered movies/show.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 56ms (Views: 37.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 16:53:24 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 16:53:24 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 16:53:24 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 16:53:24 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 16:53:24 -0400
+
+
+Started GET "/movies/1/edit" for ::1 at 2016-05-27 16:53:28 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  [1m[35m (0.1ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  Rendered movies/_form.html.erb (6.8ms)
+  Rendered movies/edit.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/movies/1" for ::1 at 2016-05-27 16:53:34 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RchesOp+SyLGPYLLCBpLsvYs7wBCs5QqEIlaLKlL8RoYVrWbIw21iDLTirigoEXuB1ipkW1/un4nm4b9MZdCZA==", "movie"=>{"title"=>"Alien", "format_ids"=>["2", "3", ""]}, "commit"=>"Update Movie", "id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)
+
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  app/controllers/movies_controller.rb:38:in `movie_params'
+  app/controllers/movies_controller.rb:23:in `update'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (83.6ms)
+
+
+Started PATCH "/movies/1" for ::1 at 2016-05-27 16:54:50 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RchesOp+SyLGPYLLCBpLsvYs7wBCs5QqEIlaLKlL8RoYVrWbIw21iDLTirigoEXuB1ipkW1/un4nm4b9MZdCZA==", "movie"=>{"title"=>"Alien", "format_ids"=>["2", "3", ""]}, "commit"=>"Update Movie", "id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+Unpermitted parameter: format_ids
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 9ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 16:54:50 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[35mFormat Load (0.2ms)[0m  SELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 16:54:50 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 16:54:50 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 16:54:50 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 16:54:50 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 16:54:50 -0400
+
+
+Started GET "/movies/1/edit" for ::1 at 2016-05-27 16:54:52 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats"
+  [1m[36m (0.1ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  Rendered movies/_form.html.erb (5.7ms)
+  Rendered movies/edit.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/movies/1" for ::1 at 2016-05-27 16:54:55 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"95W0x5Tn3IBxLcjT2eOEJRZ/KQ7o2ZufLJ6wjiUtQzGqC1/sXZQiKoXDwKBxWYp55wtvn8cVtcsbjGxfvfHwTw==", "movie"=>{"title"=>"Alien", "format_ids"=>["2", "3", ""]}, "commit"=>"Update Movie", "id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+Unpermitted parameter: format_ids
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 16:54:55 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 16:55:25 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[35mFormat Load (0.3ms)[0m  SELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 16:55:26 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 16:55:26 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 16:55:26 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 16:55:26 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 16:55:26 -0400
+
+
+Started GET "/movies/1/edit" for ::1 at 2016-05-27 16:55:29 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats"
+  [1m[36m (0.1ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  Rendered movies/_form.html.erb (4.8ms)
+  Rendered movies/edit.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 24ms (Views: 17.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/1/edit" for ::1 at 2016-05-27 16:56:21 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  [1m[35m (0.1ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  Rendered movies/_form.html.erb (13.3ms)
+  Rendered movies/edit.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 35ms (Views: 27.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 16:56:21 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 16:56:21 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 16:56:21 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 16:56:21 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 16:56:21 -0400
+
+
+Started PATCH "/movies/1" for ::1 at 2016-05-27 16:56:23 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gw7ZmxCEnixjIn/9eCaqVubr9wRr9oVn5y7BrlJex3lGkDKw2fdghpfMd47QnKQKF5+xlUQ6qzPQPB1/yoJ0Bw==", "movie"=>{"title"=>"Alien", "format_ids"=>[""]}, "commit"=>"Update Movie", "id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: format_ids
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 16:56:23 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/1/edit" for ::1 at 2016-05-27 16:56:25 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  [1m[35m (0.1ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  Rendered movies/_form.html.erb (4.4ms)
+  Rendered movies/edit.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/movies/1" for ::1 at 2016-05-27 16:56:26 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yE8UzLYN6Takz936PNy2jf488VbXe1IOtwPA0LT0OrSV0f/nf34XnFAh1YmUZrjRD0i3x/i3fFqAERwBLCiJyg==", "movie"=>{"title"=>"Alien", "format_ids"=>["2", ""]}, "commit"=>"Update Movie", "id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: format_ids
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 16:56:26 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 17:00:31 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ArgumentError (You need to supply at least one validation):
+  app/models/movie.rb:5:in `<class:Movie>'
+  app/models/movie.rb:1:in `<top (required)>'
+  app/controllers/movies_controller.rb:38:in `find_movie'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (43.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (81.7ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 17:01:46 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.2ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 32ms (Views: 23.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 17:01:46 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 17:01:46 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 17:01:46 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 17:01:46 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 17:01:46 -0400
+
+
+Started GET "/movies/1/edit" for ::1 at 2016-05-27 17:01:49 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  [1m[35m (0.1ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  Rendered movies/_form.html.erb (6.0ms)
+  Rendered movies/edit.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/movies/1" for ::1 at 2016-05-27 17:01:52 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bbiYcFx/Ra7cNiYDo3avWysBfaBmODW4UGwseTgXItcwJnNblQy7BCjYLnALzKEH2nU7MUn0G+xnfvCooMuRqQ==", "movie"=>{"title"=>"Alien", "format_ids"=>["2", ""]}, "commit"=>"Update Movie", "id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: format_ids
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 17:01:52 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1/edit" for ::1 at 2016-05-27 17:01:55 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  [1m[35m (0.1ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  Rendered movies/_form.html.erb (3.9ms)
+  Rendered movies/edit.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/movies/1" for ::1 at 2016-05-27 17:02:30 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D6+yyjAxYDeYLHzSIEBfmuNW3Zv3JpB2+tMWl3w8JXxSMVnh+UKenWzCdKGI+lHGEiKbCtjqviLNwcpG5OCWAg==", "movie"=>{"title"=>"Alien", "format_ids"=>["2", ""]}, "commit"=>"Update Movie", "id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: format_ids
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 17:02:30 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 17:03:25 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.2ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 43ms (Views: 27.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 17:03:25 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 17:03:25 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 17:03:25 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 17:03:25 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 17:03:25 -0400
+
+
+Started GET "/movies/1/edit" for ::1 at 2016-05-27 17:03:27 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  [1m[35m (0.1ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  Rendered movies/_form.html.erb (6.0ms)
+  Rendered movies/edit.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/movies/1" for ::1 at 2016-05-27 17:03:29 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/Ol5GQAtk3kr8crpxzEGFY06nzUmX71WJ0QzN2KEd9Shd5IyyV5t098fwppviwhJfE7ZpAmTkwIQVu/m+ljEqg==", "movie"=>{"title"=>"Alien", "format_ids"=>["2", ""]}, "commit"=>"Update Movie", "id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: format_ids
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 17:03:29 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 17:03:48 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 17:03:48 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 17:03:48 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 17:03:48 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 17:03:48 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 17:03:48 -0400
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 17:03:55 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 17:03:55 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 17:03:55 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 17:03:55 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 17:03:55 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 17:03:55 -0400
+  [1m[36mMovie Load (1.6ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+
+
+Started GET "/movies/1/edit" for ::1 at 2016-05-27 17:05:06 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  [1m[35m (0.1ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  Rendered movies/_form.html.erb (4.2ms)
+  Rendered movies/edit.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/movies/1" for ::1 at 2016-05-27 17:05:09 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DE65ATvvWHiX8dx7+x9T00cAkSJpFFWKy+QpB27Wna1R0FIq8pym0mMf1AhTpV2PtnTXs0bYe9789vXW9gou0w==", "movie"=>{"title"=>"Alien", "format_ids"=>[""]}, "commit"=>"Update Movie", "id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+Unpermitted parameter: format_ids
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 17:05:09 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 17:07:48 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (private method `format' called for #<Movie:0x007ffe3a9b1758>
+Did you mean?  formats
+               formats=):
+     6: <p><%= @movie.director %></p>
+     7: 
+     8: <ul>
+     9:   <% @movie.format.each do |format| %>
+    10:     <li><%= @format.format %></li>
+    11:   <% end %>
+    12: </ul>
+  app/views/movies/show.html.erb:9:in `_app_views_movies_show_html_erb__4382252519445848529_70364903022120'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.9ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (85.4ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 17:08:47 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 17:08:48 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 17:08:48 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 17:08:48 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 17:08:48 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 17:08:48 -0400
+
+
+Started GET "/movies/1/edit" for ::1 at 2016-05-27 17:08:50 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats"
+  [1m[36m (0.1ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 1]]
+  Rendered movies/_form.html.erb (3.7ms)
+  Rendered movies/edit.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/movies/1" for ::1 at 2016-05-27 17:08:52 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v5m16vaXljSC2U48+k5Ly9WeQOaZQv7AKao4h9/+RfDiB17BP+RonnY3Rk9S9EWXJOoGd7aO0JQeuORWRyL2jg==", "movie"=>{"title"=>"Alien", "format_ids"=>["2", ""]}, "commit"=>"Update Movie", "id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+Unpermitted parameter: format_ids
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 17:08:52 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 17:13:47 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/3" for ::1 at 2016-05-27 17:13:48 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 3]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.3ms)
+  Rendered movies/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 17:13:51 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 17:13:53 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 2]]
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/2/edit" for ::1 at 2016-05-27 17:13:55 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[35mFormat Load (0.2ms)[0m  SELECT "formats".* FROM "formats"
+  [1m[36m (0.1ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 2]]
+  Rendered movies/_form.html.erb (3.6ms)
+  Rendered movies/edit.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/movies/2" for ::1 at 2016-05-27 17:13:59 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RfVpmWBcyjnUVR4DP1kKS7lQVtmWp7aWWbRWGIhHhBUYa4KyqS80kyC7FnCX4wQXSCQQSLlrmMJuporJEJs3aw==", "movie"=>{"title"=>"Aliens", "format_ids"=>["2", ""]}, "commit"=>"Update Movie", "id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+Unpermitted parameter: format_ids
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/2
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 17:13:59 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 2]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 17:14:04 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/3" for ::1 at 2016-05-27 17:14:06 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 3]]
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/3/edit" for ::1 at 2016-05-27 17:14:08 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered movies/_allmovieslink.html.erb (0.3ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  [1m[35m (0.1ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 3]]
+  Rendered movies/_form.html.erb (3.7ms)
+  Rendered movies/edit.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/movies/3" for ::1 at 2016-05-27 17:14:12 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MMG0qiBq/PKtBzLkh+knQDRo8ZU/kmW3MlNvhGbvXGBtX1+B6RkCWFnpOpcvUykcxRy3BBBeS+MFQbNV/jPvHg==", "movie"=>{"title"=>"Alien 3", "format_ids"=>["2", ""]}, "commit"=>"Update Movie", "id"=>"3"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 3]]
+Unpermitted parameter: format_ids
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/3
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/3" for ::1 at 2016-05-27 17:14:12 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 3]]
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/3/edit" for ::1 at 2016-05-27 17:14:14 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  [1m[35m (0.1ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 3]]
+  Rendered movies/_form.html.erb (3.7ms)
+  Rendered movies/edit.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/movies/3/edit" for ::1 at 2016-05-27 17:15:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered movies/_allmovieslink.html.erb (0.5ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  [1m[35m (0.2ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 3]]
+  Rendered movies/_form.html.erb (54.6ms)
+  Rendered movies/edit.html.erb within layouts/application (61.4ms)
+Completed 200 OK in 320ms (Views: 288.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 17:15:37 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 17:15:37 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 17:15:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 17:15:37 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 17:15:37 -0400
+
+
+Started PATCH "/movies/3" for ::1 at 2016-05-27 17:15:39 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gFiwkw32p/Rs+2/mZ9aD0lFFpwgPl2Ls5cspWlVGNWfdxlu4xIVZXpgVZ5XPbI2OoDHhmSBbTLjS2fWLzZqGGQ==", "movie"=>{"title"=>"Alien 3", "format_ids"=>["2", ""]}, "commit"=>"Update Movie", "id"=>"3"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 3]]
+Unpermitted parameter: format_ids
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/3
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/3" for ::1 at 2016-05-27 17:15:39 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 3]]
+  Rendered movies/_editlink.html.erb (0.5ms)
+  Rendered movies/_deletelink.html.erb (0.5ms)
+  Rendered movies/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/3/edit" for ::1 at 2016-05-27 17:15:41 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered movies/_allmovieslink.html.erb (0.4ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  [1m[35m (0.1ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 3]]
+  Rendered movies/_form.html.erb (4.4ms)
+  Rendered movies/edit.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/3/edit" for ::1 at 2016-05-27 17:17:07 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats"
+  [1m[36m (0.1ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 3]]
+  Rendered movies/_form.html.erb (14.2ms)
+  Rendered movies/edit.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 41ms (Views: 31.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 17:17:08 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 17:17:08 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 17:17:08 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 17:17:08 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 17:17:08 -0400
+
+
+Started PATCH "/movies/3" for ::1 at 2016-05-27 17:17:10 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SXdRF1ox2aBcalZPat0cIi+Eymk3DUMhVYghrxdmpHYU6bo8k0InCqiEXjzCZxJ+3vCM+BjBbXVimv1+j7oXCA==", "movie"=>{"title"=>"Alien 3", "format_ids"=>["2", ""]}, "commit"=>"Update Movie", "id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+Unpermitted parameter: format_ids
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/3
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/3" for ::1 at 2016-05-27 17:17:10 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[35mFormat Load (0.2ms)[0m  SELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 3]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/3/edit" for ::1 at 2016-05-27 17:17:12 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats"
+  [1m[36m (0.1ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 3]]
+  Rendered movies/_form.html.erb (4.9ms)
+  Rendered movies/edit.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/movies/3" for ::1 at 2016-05-27 17:17:14 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TTN9twotJNynBY9w0in4+WJkSsFN1J9DQEcCTpqmkVYQrZacw17adlPrhwN6k/alkxAMUGIYsRd3Vd6fAnoiKA==", "movie"=>{"title"=>"Alien 3", "format_ids"=>["1", ""]}, "commit"=>"Update Movie", "id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 3]]
+Unpermitted parameter: format_ids
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/3
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/3" for ::1 at 2016-05-27 17:17:14 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 3]]
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/3" for ::1 at 2016-05-27 17:19:59 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[35mFormat Load (0.3ms)[0m  SELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 3]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 39ms (Views: 29.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 17:20:00 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 17:20:00 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 17:20:00 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 17:20:00 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 17:20:00 -0400
+
+
+Started GET "/movies" for ::1 at 2016-05-27 17:20:01 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 17:20:02 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.3ms)
+  [1m[36mFormat Load (0.2ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 2]]
+  Rendered movies/_editlink.html.erb (0.6ms)
+  Rendered movies/_deletelink.html.erb (0.7ms)
+  Rendered movies/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/2/edit" for ::1 at 2016-05-27 17:20:04 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  [1m[35m (0.1ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 2]]
+  Rendered movies/_form.html.erb (6.1ms)
+  Rendered movies/edit.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/movies/2" for ::1 at 2016-05-27 17:20:07 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M3vHbAgKbPibaJ1fWbAznzC5Nnla5VzPiV0BQYC6oEJu5SxHwXmSUm+GlSzxCj3Dwc1w6HUpcpu+T92QGGYTPA==", "movie"=>{"title"=>"Aliens", "format_ids"=>["2", ""]}, "commit"=>"Update Movie", "id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+Unpermitted parameter: format_ids
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/2
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 17:20:07 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 2]]
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 17:20:32 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 2]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 34ms (Views: 24.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 17:20:32 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 17:20:32 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 17:20:32 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 17:20:32 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 17:20:32 -0400
+
+
+Started GET "/movies/2/edit" for ::1 at 2016-05-27 17:20:33 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  [1m[35m (0.1ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 2]]
+  Rendered movies/_form.html.erb (5.4ms)
+  Rendered movies/edit.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/movies/2" for ::1 at 2016-05-27 17:20:36 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O9mZ7boi3MrijlMBpvdQGbCiW37TlWp8xCaVmLoI0L5mR3LGc1EiYBZgW3IOTV5FQdYd7/xZRCjzNElJItRjwA==", "movie"=>{"title"=>"Aliens", "format_ids"=>["2", ""]}, "commit"=>"Update Movie", "id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+Unpermitted parameter: format_ids
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/2
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 17:20:36 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 2]]
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 17:20:54 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 2]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 40ms (Views: 25.9ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 17:20:54 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 17:20:54 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 17:20:54 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 17:20:54 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 17:20:54 -0400
+
+
+Started GET "/movies/2/edit" for ::1 at 2016-05-27 17:20:55 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  [1m[35m (0.1ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 2]]
+  Rendered movies/_form.html.erb (6.7ms)
+  Rendered movies/edit.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/movies/2" for ::1 at 2016-05-27 17:20:58 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VRCqTi+oEDOdOVNfteuNKBA44WrVV4p3wdBn+c9t2U8IjkFl5tvumWnXWywdUYN04Uyn+/qbpCP2wrsoV7FqMQ==", "movie"=>{"title"=>"Aliens", "format_ids"=>["2", ""]}, "commit"=>"Update Movie", "id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)
+
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  app/controllers/movies_controller.rb:42:in `movie_params'
+  app/controllers/movies_controller.rb:23:in `update'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (91.5ms)
+
+
+Started PATCH "/movies/2" for ::1 at 2016-05-27 17:22:08 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VRCqTi+oEDOdOVNfteuNKBA44WrVV4p3wdBn+c9t2U8IjkFl5tvumWnXWywdUYN04Uyn+/qbpCP2wrsoV7FqMQ==", "movie"=>{"title"=>"Aliens", "format_ids"=>["2", ""]}, "commit"=>"Update Movie", "id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+Unpermitted parameter: format_ids
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/2
+Completed 302 Found in 11ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 17:22:08 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 2]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 17:22:08 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 17:22:08 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 17:22:08 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 17:22:08 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 17:22:08 -0400
+
+
+Started GET "/movies/2/edit" for ::1 at 2016-05-27 17:22:10 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats"
+  [1m[36m (0.2ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 2]]
+  Rendered movies/_form.html.erb (13.7ms)
+  Rendered movies/edit.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/movies/2" for ::1 at 2016-05-27 17:22:13 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bUpODDP8lqBS7gtPi9svtDpOBONqw7wDVRIO5xFkbtsw1KUn+o9oCqYAAzwjYSHoyzpCckUPkldiANI2ibjdpQ==", "movie"=>{"title"=>"Aliens", "format_ids"=>["2", ""]}, "commit"=>"Update Movie", "id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+Unpermitted parameter: format_ids
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/2
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 17:22:13 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 2]]
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 17:23:00 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 2]]
+  Rendered movies/_editlink.html.erb (0.3ms)
+  Rendered movies/_deletelink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 36ms (Views: 27.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 17:23:00 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 17:23:00 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 17:23:00 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 17:23:00 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 17:23:00 -0400
+
+
+Started GET "/movies/2/edit" for ::1 at 2016-05-27 17:23:01 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats"
+  [1m[36m (0.1ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 2]]
+  Rendered movies/_form.html.erb (6.3ms)
+  Rendered movies/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/movies/2" for ::1 at 2016-05-27 17:23:03 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uUbc8cWOnhdA4EVUNWMVUREHeUPLjM76bQuT0tNIauzk2DfaDP1gvbQOTSed2RsN4HM/0uRA4K5aGU8DS5TZkg==", "movie"=>{"title"=>"Aliens", "format_ids"=>["2", ""]}, "commit"=>"Update Movie", "id"=>"2"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+Unpermitted parameter: format_ids
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/2
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/2" for ::1 at 2016-05-27 17:23:03 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 2]]
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 17:23:26 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 23ms (Views: 18.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-05-27 17:23:28 -0400
+Processing by MoviesController#new as HTML
+  Rendered movies/_allmovieslink.html.erb (0.3ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats"
+  Rendered movies/_form.html.erb (15.8ms)
+  Rendered movies/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/movies" for ::1 at 2016-05-27 17:23:45 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DgeOcZIPV1mADI63YOEsgaJTRBJt2X8oGGdMQtfmfOhTmWVaW3yp83TihsTIWyLdUycCg0IVUXwvdZCTTzrPlg==", "movie"=>{"title"=>"Snatch", "format_ids"=>["2", ""]}, "commit"=>"Create Movie"}
+Unpermitted parameter: format_ids
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Snatch"], ["created_at", "2016-05-27 21:23:45.330304"], ["updated_at", "2016-05-27 21:23:45.330304"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/new
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-05-27 17:23:45 -0400
+Processing by MoviesController#new as HTML
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats"
+  Rendered movies/_form.html.erb (8.8ms)
+  Rendered movies/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 17:23:47 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/4" for ::1 at 2016-05-27 17:23:52 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 4]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.3ms)
+  Rendered movies/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/4/edit" for ::1 at 2016-05-27 17:23:53 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  [1m[35m (0.1ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 4]]
+  Rendered movies/_form.html.erb (4.3ms)
+  Rendered movies/edit.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/movies/4" for ::1 at 2016-05-27 17:23:56 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3oqkgrdKZFjvPINk1g/DjgfwNEBu9yefzPRxcF/i2MODFE+pfjma8hvSixd+tc3S9oRy0UE7Ccv75q2hxz5rvQ==", "movie"=>{"title"=>"Snatch", "format_ids"=>["2", ""]}, "commit"=>"Update Movie", "id"=>"4"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 4]]
+Unpermitted parameter: format_ids
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/4
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/4" for ::1 at 2016-05-27 17:23:56 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered movies/_allmovieslink.html.erb (0.5ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 4]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/4" for ::1 at 2016-05-27 17:24:33 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 4]]
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 33ms (Views: 24.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 17:24:34 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 17:24:34 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 17:24:34 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 17:24:34 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 17:24:34 -0400
+
+
+Started GET "/movies/4/edit" for ::1 at 2016-05-27 17:24:35 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  [1m[35m (0.1ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 4]]
+  Rendered movies/_form.html.erb (6.3ms)
+  Rendered movies/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/movies/4" for ::1 at 2016-05-27 17:24:37 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TuZCypW0L23GdcMoezxJ7qL4gctapwy5i66BBPkiJ9ATeKnhXMfRxzKby1vThkeyU4zHWnVrIu28vF3VYf6Urg==", "movie"=>{"title"=>"Snatch", "format_ids"=>["2", ""]}, "commit"=>"Update Movie", "id"=>"4"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 4]]
+Unpermitted parameter: format_ids
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/4
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/4" for ::1 at 2016-05-27 17:24:37 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 4]]
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/4" for ::1 at 2016-05-27 17:29:39 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 4]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 42ms (Views: 34.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 17:29:39 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 17:29:39 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 17:29:39 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 17:29:39 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 17:29:39 -0400
+
+
+Started GET "/movies/4/edit" for ::1 at 2016-05-27 17:29:41 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  [1m[35m (0.1ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 4]]
+  Rendered movies/_form.html.erb (5.7ms)
+  Rendered movies/edit.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/movies/4" for ::1 at 2016-05-27 17:29:46 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VvyXQFS2OPOHWs7xhE4R11eWWYr2hmtE9bzTAEJjBXYLYnxrncXGWXO0xoIs9B+LpuIfG9lKRRDCrg/R2r+2CA==", "movie"=>{"title"=>"Snatch", "format_ids"=>["3", ""]}, "commit"=>"Update Movie", "id"=>"4"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT  "formats".* FROM "formats" WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mFormat Load (0.0ms)[0m  SELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 4]]
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "movie_formats" ("movie_id", "format_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["movie_id", 4], ["format_id", 3], ["created_at", "2016-05-27 21:29:46.625673"], ["updated_at", "2016-05-27 21:29:46.625673"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies/4
+Completed 302 Found in 13ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/movies/4" for ::1 at 2016-05-27 17:29:46 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 4]]
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.1ms)
+  Rendered movies/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 17:35:20 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-05-27 17:35:21 -0400
+Processing by MoviesController#new as HTML
+  Rendered movies/_allmovieslink.html.erb (0.3ms)
+  [1m[35mFormat Load (0.2ms)[0m  SELECT "formats".* FROM "formats"
+  Rendered movies/_form.html.erb (18.9ms)
+  Rendered movies/new.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/movies" for ::1 at 2016-05-27 17:36:35 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hk/XnpMuP9R3PX8xDVh7GoMv5fshR1hxOgCzeBBwZ4RD0Ty1Wl3BfoPTd0Kl4nVGclujag6LdiUNEm+piKzU+g==", "movie"=>{"title"=>"test", "format_ids"=>["1", "2", "3", ""]}, "commit"=>"Create Movie"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `restaurant_params' for #<MoviesController:0x007fe1fcdbc118>):
+  app/controllers/movies_controller.rb:15:in `create'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.2ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (41.0ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (89.4ms)
+
+
+Started POST "/movies" for ::1 at 2016-05-27 17:36:58 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hk/XnpMuP9R3PX8xDVh7GoMv5fshR1hxOgCzeBBwZ4RD0Ty1Wl3BfoPTd0Kl4nVGclujag6LdiUNEm+piKzU+g==", "movie"=>{"title"=>"test", "format_ids"=>["1", "2", "3", ""]}, "commit"=>"Create Movie"}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `restaurant_params' for #<MoviesController:0x007fe1fab36da0>):
+  app/controllers/movies_controller.rb:15:in `create'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.0ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 17:37:01 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies/4" for ::1 at 2016-05-27 17:37:04 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 4]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/movies/4/edit" for ::1 at 2016-05-27 17:37:05 -0400
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  [1m[35m (0.1ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "formats".id FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 4]]
+  Rendered movies/_form.html.erb (4.2ms)
+  Rendered movies/edit.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/movies/4" for ::1 at 2016-05-27 17:37:07 -0400
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e33MOasDogPVg7S/Z7q0/ORU3tAndowqYZhunxei+5gm4ycSYnBcqSFtvMzPALqgFSCYQQi6on5WirJOj35I5g==", "movie"=>{"title"=>"Snatch", "format_ids"=>["3", ""]}, "commit"=>"Update Movie", "id"=>"4"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT  "formats".* FROM "formats" WHERE "formats"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mFormat Load (0.0ms)[0m  SELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 4]]
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies/4
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/4" for ::1 at 2016-05-27 17:37:07 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 4]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.3ms)
+  Rendered movies/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 17:37:08 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies/new" for ::1 at 2016-05-27 17:37:10 -0400
+Processing by MoviesController#new as HTML
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats"[0m
+  Rendered movies/_form.html.erb (3.9ms)
+  Rendered movies/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/movies" for ::1 at 2016-05-27 17:37:44 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kgCtc0/IH67ogS+lrrHd7Q6oFmx8O9T+lGetrSpo3ybPnkZYhrvhBBxvJ9YGC9Ox/9xQ/VP3+qqjdXF8srRsWA==", "movie"=>{"title"=>"test", "format_ids"=>["1", "2", "3", ""]}, "commit"=>"Create Movie"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `restaurant_params' for #<MoviesController:0x007fe1ff16cd10>):
+  app/controllers/movies_controller.rb:15:in `create'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.0ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (79.2ms)
+
+
+Started POST "/movies" for ::1 at 2016-05-27 17:38:25 -0400
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kgCtc0/IH67ogS+lrrHd7Q6oFmx8O9T+lGetrSpo3ybPnkZYhrvhBBxvJ9YGC9Ox/9xQ/VP3+qqjdXF8srRsWA==", "movie"=>{"title"=>"test", "format_ids"=>["1", "2", "3", ""]}, "commit"=>"Create Movie"}
+  [1m[35mFormat Load (0.2ms)[0m  SELECT "formats".* FROM "formats" WHERE "formats"."id" IN (1, 2, 3)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "test"], ["created_at", "2016-05-27 21:38:25.278620"], ["updated_at", "2016-05-27 21:38:25.278620"]]
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "movie_formats" ("format_id", "movie_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["format_id", 1], ["movie_id", 5], ["created_at", "2016-05-27 21:38:25.279946"], ["updated_at", "2016-05-27 21:38:25.279946"]]
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "movie_formats" ("format_id", "movie_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["format_id", 2], ["movie_id", 5], ["created_at", "2016-05-27 21:38:25.280995"], ["updated_at", "2016-05-27 21:38:25.280995"]]
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "movie_formats" ("format_id", "movie_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["format_id", 3], ["movie_id", 5], ["created_at", "2016-05-27 21:38:25.281800"], ["updated_at", "2016-05-27 21:38:25.281800"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 34ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 17:38:25 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-27 17:38:25 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-27 17:38:25 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-27 17:38:25 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-27 17:38:25 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-27 17:38:25 -0400
+
+
+Started GET "/movies/5" for ::1 at 2016-05-27 17:38:27 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[36mFormat Load (0.1ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 5]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/movies/5" for ::1 at 2016-05-27 17:38:30 -0400
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kbqWP4/nybZdU1P1BLrNfJub71u55oeTHo/lwF+lOwrMJH0URpQ3HKm9W4asAMMgau+pypYqqccpnTkRx3mIdA==", "id"=>"5"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 5]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.8ms)
+
+ActionView::MissingTemplate (Missing template movies/destroy, application/destroy with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/melissahanson/ROR101/github/final-project/MMDb/app/views"
+):
+  actionview (4.2.6) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.6) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.6) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.6) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.6) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.6) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.6) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.6) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.6) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.6) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/melissahanson/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.6) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.6) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.6) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.6) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.6) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.6) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.6) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.6) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.6) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/melissahanson/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/melissahanson/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/melissahanson/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (44.8ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (7.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (45.9ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (91.8ms)
+
+
+Started DELETE "/movies/5" for ::1 at 2016-05-27 17:39:08 -0400
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kbqWP4/nybZdU1P1BLrNfJub71u55oeTHo/lwF+lOwrMJH0URpQ3HKm9W4asAMMgau+pypYqqccpnTkRx3mIdA==", "id"=>"5"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 5]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.6ms)
+
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  app/controllers/movies_controller.rb:39:in `destroy'
+
+
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.0ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.5ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/melissahanson/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (95.0ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 17:39:15 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/4" for ::1 at 2016-05-27 17:39:17 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered movies/_allmovieslink.html.erb (0.2ms)
+  [1m[36mFormat Load (0.2ms)[0m  [1mSELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?[0m  [["movie_id", 4]]
+  Rendered movies/_editlink.html.erb (0.2ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/movies/4" for ::1 at 2016-05-27 17:39:20 -0400
+Processing by MoviesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"p2zis4elhcHYEeiV1XrsQWRPJ5fPKm3m0R4T1Q6UGvX68gmYTtZ7ayz/4OZ9wOIdlTthBuDmQ7LmDM8Elkipiw==", "id"=>"4"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "movies" WHERE "movies"."id" = ?  [["id", 4]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/movies
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/movies" for ::1 at 2016-05-27 17:39:20 -0400
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for ::1 at 2016-05-27 17:41:08 -0400
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/_allmovieslink.html.erb (0.1ms)
+  [1m[35mFormat Load (0.1ms)[0m  SELECT "formats".* FROM "formats" INNER JOIN "movie_formats" ON "formats"."id" = "movie_formats"."format_id" WHERE "movie_formats"."movie_id" = ?  [["movie_id", 1]]
+  Rendered movies/_editlink.html.erb (0.1ms)
+  Rendered movies/_deletelink.html.erb (0.2ms)
+  Rendered movies/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.4ms)
