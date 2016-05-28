@@ -39,6 +39,10 @@ group :development, :test do
   gem 'devise'
   gem 'bootstrap-sass', '~> 3.2.0'
   gem 'autoprefixer-rails'
+  source 'https://rubygems.org'
+  gem 'nokogiri'
+  gem 'rack', '~>1.1'
+  gem 'rspec', :require => 'spec'
 end
 
 group :development do

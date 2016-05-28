@@ -4,16 +4,13 @@
   <title>MMDb</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link href='https://fonts.googleapis.com/css?family=Vast+Shadow' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,400italic,700' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= render "navbar" %>
 <div class="container">
-  <% if current_user %>
-    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to "Log in", new_user_session_path %>
-    <%= link_to "Register", new_user_registration_path %>
-  <% end %>
 
   <% flash.each do |name, msg| %>
     <div class="<%= name %>">
@@ -24,5 +21,7 @@
 <%= yield %>
 
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </body>
 </html>
