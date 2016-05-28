@@ -7,15 +7,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container">
+  <% if current_user %>
+    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "Log in", new_user_session_path %>
+    <%= link_to "Register", new_user_registration_path %>
+  <% end %>
 
-<% flash.each do |name, msg| %>
-  <div class="<%= name %>">
-    <%= msg %>
-  </div>
-<% end %>
-
+  <% flash.each do |name, msg| %>
+    <div class="<%= name %>">
+      <%= msg %>
+    </div>
+  <% end %>
 
 <%= yield %>
 
+</div>
 </body>
 </html>

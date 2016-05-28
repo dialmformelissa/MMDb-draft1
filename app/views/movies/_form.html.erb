@@ -1,11 +1,21 @@
 <%= form_for @movie, html: { multipart: true} do |f| %>
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :format %><br>
-    <%= collection_check_boxes(:movie, :format_ids, Format.all, :id, :format) %>
-  </p>
-  <%= f.submit %>
+  
+    <% if @movie.errors.any? %>
+    <% @movie.errors.full_messages.each do |message| %>
+      <p>
+        <%= message %>
+      </p>
+    <% end %>
+  <% end %>
+  <div class="form-group">
+    <p>
+      <%= f.label :title %><br>
+      <%= f.text_field :title %>
+    </p>
+    <p>
+      <%= f.label :format %><br>
+      <%= collection_check_boxes(:movie, :format_ids, Format.all, :id, :format) %>
+    </p>
+    <%= f.submit %>
+  </div>
 <% end %>
