@@ -1,6 +1,5 @@
 <div>
-  
-  <table class="table table-hover">
+  <table class="table">
     <thead>
       <tr>
         <th>Title</th>
@@ -8,16 +7,18 @@
         <th></th>
       </tr>
     </thead>
-    <% @movies.each do |movie| %>
+    <tbody>
+      <% @movies.each do |movie| %>
     <tr>
-      <td><%= link_to movie.title, movie_path(movie) %></td>
-        <td><% movie.formats.each do |format| %>
-          <%= format.format %> /
-        <% end %></td>
-        <% if current_user %>
-          <td><%= link_to "Edit", edit_movie_path(movie) %></td>
-        <% end %>
+      <td><%= movie.title %></td>
+      <td>
+          <% movie.formats.each do |format| %>
+            <%= format.format %>
+          <% end %>  
+      </td>
+      <td><%= link_to "Edit", edit_movie_path(movie) %></td>
     </tr>
     <% end %>
+    </tbody>
   </table>
 </div>
