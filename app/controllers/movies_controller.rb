@@ -1,9 +1,14 @@
 class MoviesController < ApplicationController
   before_action :find_movie, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!
 
   def index
-    @movies = Movie.all
+    @movies = Movie.search(params[:query])
+    
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def show

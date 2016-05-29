@@ -9,3 +9,9 @@ h2 {
   font-family: 'Vast Shadow', cursive;
   display: inline;
 }
+
+.showmovies, .showmovies a:link, .showmovies a:visited, .showmovies a:hover, .showmovies a:active {
+  margin: 15px;
+  text-decoration: none;
+  color: white;
+}

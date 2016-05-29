@@ -1,6 +1,14 @@
 <div>
-  <% @movies.each do |movie| %>
+  
   <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Format</th>
+        <th></th>
+      </tr>
+    </thead>
+    <% @movies.each do |movie| %>
     <tr>
       <td><%= link_to movie.title, movie_path(movie) %></td>
         <td><% movie.formats.each do |format| %>
