@@ -4,6 +4,10 @@
       <tr>
         <th>Title</th>
         <th>Format</th>
+        <th>Digital Format</th>
+        <th>Definition</th>
+        <th>App</th>
+        <th>Player</th>
         <th></th>
       </tr>
     </thead>
@@ -11,11 +15,15 @@
       <% @movies.each do |movie| %>
     <tr>
       <td><%= movie.title %></td>
-      <td>
-          <% movie.formats.each do |format| %>
-            <%= format.format %>
-          <% end %>  
-      </td>
+      <td><ul>
+        <% movie.formats.each do |format| %>
+          <li><%= format.format %></li>
+        <% end %> 
+      </ul></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
       <td><%= link_to "Edit", edit_movie_path(movie) %></td>
     </tr>
     <% end %>

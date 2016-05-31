@@ -11,12 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160527215904) do
+ActiveRecord::Schema.define(version: 20160530214449) do
+
+  create_table "apps", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "format_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "definitions", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "digital_formats", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "formats", force: :cascade do |t|
     t.string   "format"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "movie_id"
   end
 
   create_table "movie_formats", force: :cascade do |t|
@@ -35,6 +55,12 @@ ActiveRecord::Schema.define(version: 20160527215904) do
     t.string   "director"
     t.date     "release_date"
     t.integer  "format_id"
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
