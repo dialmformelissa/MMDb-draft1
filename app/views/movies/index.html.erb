@@ -25,7 +25,11 @@
         <li><%= digital_format.name %></li>
       <% end %>
       </ul></td>
-      <td></td>
+      <td><ul>
+        <% movie.definitions.each do |definition| %>
+        <li><%= definition.name %></li>
+      <% end %>
+      </ul></td>
       <td></td>
       <td></td>
       <td><%= link_to "Edit", edit_movie_path(movie) %></td>

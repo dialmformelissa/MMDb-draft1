@@ -5,6 +5,9 @@ class Movie < ActiveRecord::Base
   has_many :movie_digital_formats
   has_many :digital_formats, through: :movie_digital_formats
 
+  has_many :movie_definitions
+  has_many :definitions, through: :movie_definitions
+
   validates :title, presence: true
 
   def self.search(term)
