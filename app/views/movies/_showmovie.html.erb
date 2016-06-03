@@ -1,13 +1,19 @@
 <h1><%= @movie.title %></h1>
-
+<p>Format</p>
 <ul>
   <% @movie.formats.each do |format| %>
     <li><%= format.format %></li>
   <% end %>
 </ul>
-
+<p>Digital Format</p>
 <ul>
   <% @movie.digital_formats.each do |digital_format| %>
     <li><%= digital_format.name %></li>
+  <% end %>
+</ul>
+<p></p>
+<ul>
+  <% @movie.apps.each do |app| %>
+    <li><%= app.name %></li>
   <% end %>
 </ul>

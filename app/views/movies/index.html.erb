@@ -30,7 +30,11 @@
         <li><%= definition.name %></li>
       <% end %>
       </ul></td>
-      <td></td>
+      <td><ul>
+        <% movie.apps.each do |app| %>
+        <li><%= app.name %></li>
+      <% end %>
+      </ul></td>
       <td></td>
       <td><%= link_to "Edit", edit_movie_path(movie) %></td>
     </tr>
