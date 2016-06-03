@@ -20,7 +20,11 @@
           <li><%= format.format %></li>
         <% end %> 
       </ul></td>
-      <td></td>
+      <td><ul>
+        <% movie.digital_formats.each do |digital_format| %>
+        <li><%= digital_format.name %></li>
+      <% end %>
+      </ul></td>
       <td></td>
       <td></td>
       <td></td>

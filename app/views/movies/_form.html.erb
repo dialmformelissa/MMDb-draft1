@@ -16,6 +16,11 @@
       <%= f.label :format %><br>
       <%= collection_check_boxes(:movie, :format_ids, Format.all, :id, :format) %>
     </p>
+    <p>
+      <%= f.label :digital_format %><br>
+      <%= collection_check_boxes(:movie, :digital_format_ids, DigitalFormat.all, :id, :name) %>
+    </p>
+
     <%= f.submit %>
   </div>
 <% end %>

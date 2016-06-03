@@ -1,7 +1,5 @@
 class DigitalFormat < ActiveRecord::Base
-  has_many :apps
-  has_many :players, through: :apps
 
-  belongs_to :format
-  belongs_to :movie
+  has_many :movie_digital_formats
+  has_many :movies, through: :movie_digital_formats
 end

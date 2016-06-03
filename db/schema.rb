@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160530214449) do
+ActiveRecord::Schema.define(version: 20160602164145) do
 
   create_table "apps", force: :cascade do |t|
     t.string   "name"
@@ -30,13 +30,23 @@ ActiveRecord::Schema.define(version: 20160530214449) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "movie_id"
+    t.integer  "format_id"
   end
 
   create_table "formats", force: :cascade do |t|
     t.string   "format"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.integer  "movie_id"
+    t.integer  "digital_format_id"
+  end
+
+  create_table "movie_digital_formats", force: :cascade do |t|
+    t.integer  "movie_id"
+    t.integer  "digital_format_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "movie_formats", force: :cascade do |t|
@@ -48,13 +58,12 @@ ActiveRecord::Schema.define(version: 20160530214449) do
 
   create_table "movies", force: :cascade do |t|
     t.string   "title"
-    t.integer  "gowatchitID"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "title_type"
     t.string   "director"
     t.date     "release_date"
-    t.integer  "format_id"
+    t.string   "collection"
   end
 
   create_table "players", force: :cascade do |t|

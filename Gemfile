@@ -39,6 +39,8 @@ group :development, :test do
   gem 'devise'
   gem 'bootstrap-sass', '~> 3.2.0'
   gem 'autoprefixer-rails'
+  gem 'sprig'
+  gem 'pry'
 end
 
 group :development do
