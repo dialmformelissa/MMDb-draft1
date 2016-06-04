@@ -11,7 +11,11 @@ class Movie < ActiveRecord::Base
   has_many :movie_apps
   has_many :apps, through: :movie_apps
 
+  has_many :movie_players
+  has_many :players, through: :movie_players
+
   validates :title, presence: true
+  
 
   def self.search(term)
     searchTerm = term

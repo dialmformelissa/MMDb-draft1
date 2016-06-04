@@ -34,7 +34,7 @@ class MoviesController < ApplicationController
   end
 
   def update
-    if @movie.update(movie_params)
+     if @movie.update(movie_params)
       redirect_to movies_path, notice: "Movie saved"
     else
       flash.new[:error] = "There's an issue saving"
@@ -54,7 +54,7 @@ class MoviesController < ApplicationController
   end
 
   def movie_params
-      params.require(:movie).permit(:title, :format, :movie_digital_format, :digital_format, :movie_definition, :definition, :format_ids, :app_ids => [], :definition_ids => [], :digital_format_ids => [])
+    params.require(:movie).permit(:title, :format, :movie_digital_format, :digital_format, :movie_definition, :definition, :movie_player, :player, :format_ids => [], :app_ids => [], :definition_ids => [], :digital_format_ids => [], :player_ids => [])
   end
 
 end

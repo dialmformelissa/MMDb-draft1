@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160603033616) do
+ActiveRecord::Schema.define(version: 20160603140457) do
 
   create_table "apps", force: :cascade do |t|
     t.string   "name"
@@ -67,6 +67,13 @@ ActiveRecord::Schema.define(version: 20160603033616) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "movie_players", force: :cascade do |t|
+    t.integer  "movie_id"
+    t.integer  "player_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "movies", force: :cascade do |t|
     t.string   "title"
     t.datetime "created_at",   null: false
@@ -81,6 +88,7 @@ ActiveRecord::Schema.define(version: 20160603033616) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "movie_id"
   end
 
   create_table "users", force: :cascade do |t|

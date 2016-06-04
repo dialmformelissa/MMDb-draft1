@@ -41,6 +41,7 @@ group :development, :test do
   gem 'autoprefixer-rails'
   gem 'sprig'
   gem 'pry'
+  gem 'simple_form', '~> 3.2', '>= 3.2.1'
 end
 
 group :development do

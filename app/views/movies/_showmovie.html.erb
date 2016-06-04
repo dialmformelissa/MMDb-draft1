@@ -8,12 +8,12 @@
 <p>Digital Format</p>
 <ul>
   <% @movie.digital_formats.each do |digital_format| %>
-    <li><%= digital_format.name %></li>
+    <li><%= digital_format.name %><br></li>
   <% end %>
 </ul>
-<p></p>
+<p>Streaming App</p>
 <ul>
   <% @movie.apps.each do |app| %>
     <li><%= app.name %></li>
   <% end %>
-</ul>
+</ul> 

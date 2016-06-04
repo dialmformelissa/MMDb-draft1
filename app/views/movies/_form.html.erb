@@ -1,5 +1,5 @@
 <%= form_for @movie, html: { multipart: true} do |f| %>
-  
+
     <% if @movie.errors.any? %>
     <% @movie.errors.full_messages.each do |message| %>
       <p>
@@ -9,26 +9,46 @@
   <% end %>
   <div class="form-group">
     <p>
-      <%= f.label :title %><br>
+      <div class="formlabelheader">
+        <%= f.label :title %><br>
+      </div>
       <%= f.text_field :title %>
     </p>
+  </div>
+  <div class="control-group"> 
     <p>
       <%= f.label :format %><br>
-      <%= collection_check_boxes(:movie, :format_ids, Format.all, :id, :format) %>
+      <div class="checkbox_container">
+        <%= f.collection_check_boxes :format_ids, Format.all, :id, :format %>
+      </div>
     </p>
+  </div>
+  <div class="control-group"> 
     <p>
       <%= f.label :digital_format %><br>
-      <%= collection_check_boxes(:movie, :digital_format_ids, DigitalFormat.all, :id, :name) %>
+      <div class="checkbox_container">
+        <%= collection_check_boxes(:movie, :digital_format_ids, DigitalFormat.all, :id, :name) %>
+      </div>
     </p>
+  </div>
+   <div class="control-group">  
     <p>
       <%= f.label :definition %><br>
-      <%= collection_check_boxes(:movie, :definition_ids, Definition.all, :id, :name) %>
+      <div class="checkbox_container">
+        <%= collection_check_boxes(:movie, :definition_ids, Definition.all, :id, :name) %>
+      </div>
     </p>
+  </div>
+  <div class="control-group">  
     <p>
       <%= f.label :app %><br>
-      <%= collection_check_boxes(:movie, :app_ids, App.all, :id, :name) %>
+      <div class="checkbox_container">
+        <%= collection_check_boxes(:movie, :app_ids, App.all, :id, :name) %>
+      </div>
     </p>
+  </div> 
 
-    <%= f.submit %>
+  <%= f.submit %>
   </div>
+
 <% end %>
