@@ -43,6 +43,7 @@ class MoviesController < ApplicationController
   end
 
   def destroy
+    @movie = find_movie
     @movie.destroy
     redirect_to movies_path
   end
@@ -54,7 +55,7 @@ class MoviesController < ApplicationController
   end
 
   def movie_params
-    params.require(:movie).permit(:title, :format, :movie_digital_format, :digital_format, :movie_definition, :definition, :movie_player, :player, :format_ids => [], :app_ids => [], :definition_ids => [], :digital_format_ids => [], :player_ids => [])
+    params.require(:movie).permit(:title, :format, :movie_digital_format, :digital_format, :movie_definition, :definition, :movie_player, :player, :title_type, :release_date, :director, :format_ids => [], :app_ids => [], :definition_ids => [], :digital_format_ids => [], :player_ids => [])
   end
 
 end

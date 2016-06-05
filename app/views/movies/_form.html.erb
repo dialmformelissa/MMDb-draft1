@@ -1,54 +1,90 @@
-<%= form_for @movie, html: { multipart: true} do |f| %>
-
-    <% if @movie.errors.any? %>
-    <% @movie.errors.full_messages.each do |message| %>
-      <p>
-        <%= message %>
-      </p>
+<div>
+  <div class="container-fluid">
+    <%= form_for @movie, html: { multipart: true} do |f| %>
+      <% if @movie.errors.any? %>
+        <% @movie.errors.full_messages.each do |message| %>
+        <p>
+          <%= message %>
+        </p>
+      <% end %>
     <% end %>
+    
+    <%= f.submit %>
+
+    <div class="row-fluid">
+      <div class="control-group col-md-3">
+        <p>
+          <div class="formlabelheader">
+            <%= f.label :title %><br>
+          </div>
+            <%= f.text_field :title %>
+        </p>
+        <hr>
+        <p>
+          <div class="formlabelheader">
+            <%= f.label :director %><br>
+          </div>
+            <%= f.text_field :director %>
+        </p>
+        <hr>
+        <p>
+          <div class="formlabelheader">
+            <%= f.label :title_type %><br>
+          </div>
+            <%= f.text_field :title_type %>
+        </p>
+        <hr>
+        <p>
+          <div class="formlabelheader">
+            <%= f.label :release_date %><br>
+          </div>
+            <%= f.text_field :release_date %>
+        </p>
+        <hr>       
+      </div>
+
+      <div class="control-group col-md-3">  
+        <p>
+          <div class="formlabelheader">
+            <%= f.label :definition %><br>
+          </div>
+          <div class="checkbox_container">
+            <%= collection_check_boxes(:movie, :definition_ids, Definition.all, :id, :name) %>
+          </div><hr>
+        </p>
+        <p>
+          <div class="formlabelheader">
+            <%= f.label :format %><br>
+          </div>
+          <div class="checkbox_container">
+            <%= f.collection_check_boxes :format_ids, Format.all, :id, :format %>
+          </div>
+        </p><hr>
+      </div> 
+       
+      <div class="control-group col-md-3"> 
+        <p>
+          <div class="formlabelheader">
+            <%= f.label :digital_format %><br>
+          </div>
+          <div class="checkbox_container">
+            <%= collection_check_boxes(:movie, :digital_format_ids, DigitalFormat.all, :id, :name) %>
+          </div>
+        </p><hr>
+      </div>
+        
+      <div class="control-group col-md-3">  
+        <p>
+          <div class="formlabelheader">
+            <%= f.label :app %><br>
+          </div>
+          <div class="checkbox_container">
+            <%= collection_check_boxes(:movie, :app_ids, App.all, :id, :name) %>
+          </div>
+        </p>
+      </div>
+    </div>
+  </div>
+
   <% end %>
-  <div class="form-group">
-    <p>
-      <div class="formlabelheader">
-        <%= f.label :title %><br>
-      </div>
-      <%= f.text_field :title %>
-    </p>
-  </div>
-  <div class="control-group"> 
-    <p>
-      <%= f.label :format %><br>
-      <div class="checkbox_container">
-        <%= f.collection_check_boxes :format_ids, Format.all, :id, :format %>
-      </div>
-    </p>
-  </div>
-  <div class="control-group"> 
-    <p>
-      <%= f.label :digital_format %><br>
-      <div class="checkbox_container">
-        <%= collection_check_boxes(:movie, :digital_format_ids, DigitalFormat.all, :id, :name) %>
-      </div>
-    </p>
-  </div>
-   <div class="control-group">  
-    <p>
-      <%= f.label :definition %><br>
-      <div class="checkbox_container">
-        <%= collection_check_boxes(:movie, :definition_ids, Definition.all, :id, :name) %>
-      </div>
-    </p>
-  </div>
-  <div class="control-group">  
-    <p>
-      <%= f.label :app %><br>
-      <div class="checkbox_container">
-        <%= collection_check_boxes(:movie, :app_ids, App.all, :id, :name) %>
-      </div>
-    </p>
-  </div> 
-
-  <%= f.submit %>
-  </div>
-
-<% end %>
+</div>

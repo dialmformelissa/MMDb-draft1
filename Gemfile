@@ -42,6 +42,7 @@ group :development, :test do
   gem 'sprig'
   gem 'pry'
   gem 'simple_form', '~> 3.2', '>= 3.2.1'
+  gem 'filterrific'
 end
 
 group :development do
