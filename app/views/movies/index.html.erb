@@ -1,53 +1,50 @@
-<div>
-  <table class="table">
-    <thead>
-      <tr>
-        <th class="col300">Title</th>
-        <th class="col300">Director</th>
-        <th class="col85">Title Type</th>
-        <th class="col85">Release Date</th>
-        <th class="col85">Definition(s)</th>
-        <th class="col85">Format(s)</th>
-        <th class="col300">Digital Format(s)</th>
-        <th class="col300">Streaming App(s)</th>
-        <th class="editcol"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @movies.each do |movie| %>
+<table class="table">
+  <thead>
     <tr>
-      <td><%= movie.title %></td>
-      <td><%= movie.director %></td>
-      <td><%= movie.title_type %></td>
-      <td><%= movie.release_date %></td>
-      <td>
-        <% movie.definitions.each do |definition| %>
-        <%= definition.name %>
-      <% end %>
-      </td>
-      <td>
-        <% movie.formats.each do |format| %>
-          <%= format.format %><br>
-        <% end %> 
-      </td>
-      <td>
-        <% movie.digital_formats.each do |digital_format| %>
-        <%= digital_format.name %><br>
-      <% end %>
-      </td>
-      
-      <td>
-        <% movie.apps.each do |app| %>
-        <%= app.name %><br>
-      <% end %>
-      </td>
-      <td></td>
-      <td class="editlink"><%= link_to "Edit", edit_movie_path(movie) %></td>
+      <th class="col300">Title</th>
+      <th class="col300">Director</th>
+      <th class="col85">Title Type</th>
+      <th class="col85">Release Date</th>
+      <th class="col85">Definition(s)</th>
+      <th class="col85">Format(s)</th>
+      <th class="col300">Digital Format(s)</th>
+      <th class="col300">Streaming App(s)</th>
+      <th class="editcol"></th>
     </tr>
-    <tr></tr>
+  </thead>
+  <tbody>
+    <% @movies.each do |movie| %>
+  <tr>
+    <td><%= movie.title %></td>
+    <td><%= movie.director %></td>
+    <td><%= movie.title_type %></td>
+    <td><%= movie.release_date %></td>
+    <td>
+      <% movie.definitions.each do |definition| %>
+      <%= definition.name %>
     <% end %>
-    </tbody>
-  </table>
-  <hr>
-  <%= link_to "Add movie", new_movie_path %> 
-</div>
+    </td>
+    <td>
+      <% movie.formats.each do |format| %>
+        <%= format.format %><br>
+      <% end %> 
+    </td>
+    <td>
+      <% movie.digital_formats.each do |digital_format| %>
+      <%= digital_format.name %><br>
+    <% end %>
+    </td>
+    
+    <td>
+      <% movie.apps.each do |app| %>
+      <%= app.name %><br>
+    <% end %>
+    </td>
+    <td class="editlink"><%= link_to "Edit", edit_movie_path(movie) %></td>
+  </tr>
+  <tr></tr>
+  <% end %>
+  </tbody>
+</table>
+<hr>
+<%= link_to "Add movie", new_movie_path %> 

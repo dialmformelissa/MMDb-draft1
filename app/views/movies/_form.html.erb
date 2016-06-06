@@ -8,8 +8,6 @@
         </p>
       <% end %>
     <% end %>
-    
-    
 
     <div class="row-fluid">
       <div class="control-group col-md-3">
@@ -44,15 +42,15 @@
         <%= f.submit %>       
       </div>
 
-
-
       <div class="control-group col-md-3">  
         <p>
           <div class="formlabelheader">
             <%= f.label :definition %><br>
           </div>
-          <div class="checkbox_container">
-            <%= collection_check_boxes(:movie, :definition_ids, Definition.all, :id, :name) %>
+          <div class="checkbox">
+            <label>
+            <input type="checkbox" name="">
+            <%= collection_check_boxes(:movie, :definition_ids, Definition.all, :id, :name) %></label>
           </div><hr>
         </p>
         <p>
@@ -90,7 +88,8 @@
   </div>
   
   <% end %>
-  <%= button_to "Delete Movie", movie_path(@movie), method: :delete,  data: {confirm: "Are you really, really sure?"} %>
+
+
   
 </div>
 
