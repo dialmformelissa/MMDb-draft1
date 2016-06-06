@@ -9,7 +9,7 @@
       <% end %>
     <% end %>
     
-    <%= f.submit %>
+    
 
     <div class="row-fluid">
       <div class="control-group col-md-3">
@@ -40,8 +40,11 @@
           </div>
             <%= f.text_field :release_date %>
         </p>
-        <hr>       
+        <hr>
+        <%= f.submit %>       
       </div>
+
+
 
       <div class="control-group col-md-3">  
         <p>
@@ -85,6 +88,9 @@
       </div>
     </div>
   </div>
-
+  
   <% end %>
+  <%= button_to "Delete Movie", movie_path(@movie), method: :delete,  data: {confirm: "Are you really, really sure?"} %>
+  
 </div>
+

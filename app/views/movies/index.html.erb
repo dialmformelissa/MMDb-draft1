@@ -2,15 +2,15 @@
   <table class="table">
     <thead>
       <tr>
-        <th>Title</th>
-        <th>Director</th>
-        <th>Title Type</th>
-        <th>Release Date</th>
-        <th>Definition(s)</th>
-        <th>Format(s)</th>
-        <th>Digital Format(s)</th>
-        <th>Streaming App(s)</th>
-        <th></th>
+        <th class="col300">Title</th>
+        <th class="col300">Director</th>
+        <th class="col85">Title Type</th>
+        <th class="col85">Release Date</th>
+        <th class="col85">Definition(s)</th>
+        <th class="col85">Format(s)</th>
+        <th class="col300">Digital Format(s)</th>
+        <th class="col300">Streaming App(s)</th>
+        <th class="editcol"></th>
       </tr>
     </thead>
     <tbody>
@@ -42,7 +42,7 @@
       <% end %>
       </td>
       <td></td>
-      <td><%= link_to "Edit", edit_movie_path(movie) %></td>
+      <td class="editlink"><%= link_to "Edit", edit_movie_path(movie) %></td>
     </tr>
     <tr></tr>
     <% end %>

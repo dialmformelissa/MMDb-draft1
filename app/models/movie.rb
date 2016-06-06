@@ -14,7 +14,7 @@ class Movie < ActiveRecord::Base
   has_many :movie_players
   has_many :players, through: :movie_players
 
-  validates :title, presence: true
+  validates :title, :director, :movie_formats, :definitions, presence: true
   
 
   def self.search(term)
