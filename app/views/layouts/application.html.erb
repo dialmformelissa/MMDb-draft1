@@ -11,7 +11,9 @@
 </head>
 <body>
 <%= render "/movies/navbar" %>
-<%= render "allmovieslink" %>
+<div class="showmovies">
+  <span class="label label-default"><%= link_to "Show all movies", movies_path %></span>
+</div>
 <div class="container">
 
   <% flash.each do |name, msg| %>
