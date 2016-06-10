@@ -47,10 +47,8 @@
           <div class="formlabelheader">
             <%= f.label :definition %><br>
           </div>
-          <div class="checkbox">
-            <label>
-            <input type="checkbox" name="">
-            <%= collection_check_boxes(:movie, :definition_ids, Definition.all, :id, :name) %></label>
+          <div class="checkbox_container">
+          <%= collection_check_boxes(:movie, :definition_ids, Definition.all, :id, :name) %>
           </div><hr>
         </p>
         <p>
@@ -86,10 +84,5 @@
       </div>
     </div>
   </div>
-  
   <% end %>
-
-
-  
 </div>
-

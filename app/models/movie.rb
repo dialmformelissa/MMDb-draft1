@@ -14,11 +14,11 @@ class Movie < ActiveRecord::Base
   has_many :movie_players
   has_many :players, through: :movie_players
 
-  validates :title, :director, :movie_formats, :definitions, presence: true
+  validates :title, :director, presence: true
   
 
   def self.search(term)
     searchTerm = term
-    Movie.where("title LIKE ?", "%#{searchTerm}%")
+    Movie.where("title LIKE ? OR director LIKE ?", "%#{searchTerm}%", "%#{searchTerm}%")
   end
 end
